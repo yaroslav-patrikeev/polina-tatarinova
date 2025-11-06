@@ -1,8 +1,10 @@
 @import 'normalize.css';
 @import 'var.css';
-@import url(./body/_body/body.css);
-@import url(./body/_wrapper/_form/form.css);
-@import url(./body/_wrapper/_result/result.css);
+@import url(./blocks/_body/body.css);
+@import url(./blocks/_body/_wrapper/wrapper.css);
+@import url(./blocks/_body/_wrapper/_title/title.css);
+@import url(./blocks/_body/_wrapper/_weather-characteristics/weather-characteristics.css);
+@import url(./blocks/_body/_wrapper/_result/result.css);
 
 
 
