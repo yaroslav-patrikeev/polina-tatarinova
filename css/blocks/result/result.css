@@ -1,0 +1,8 @@
+.result {
+  width: 420px;
+  height: 291px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 119px 165px 97px 165px;
+}

@@ -1,0 +1,10 @@
+.weather-characteristics {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 622px;
+  height: 33px;
+  margin-left: 64px;
+  margin-right: 64px;
+  margin-bottom: 42px;
+}

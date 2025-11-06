@@ -1,10 +1,19 @@
-@import 'normalize.css';
-@import 'var.css';
-@import url(./blocks/_body/body.css);
-@import url(./blocks/_body/_wrapper/wrapper.css);
-@import url(./blocks/_body/_wrapper/_title/title.css);
-@import url(./blocks/_body/_wrapper/_weather-characteristics/weather-characteristics.css);
-@import url(./blocks/_body/_wrapper/_result/result.css);
+@import url(./general/normalize.css);
+@import url(./general/universal.css);
+@import url(./general/var.css);
+@import url(./blocks/body/body.css);
+@import url(./blocks/wrapper/wrapper.css);
+@import url(./blocks/title/title.css);
+@import url(./blocks/weather-characteristics/weather-characteristics.css);
+@import url(./blocks/weather-characteristics/_input/input.css);
+@import url(./blocks/weather-characteristics/_input/_temperature/temperature.css);
+@import url(./blocks/weather-characteristics/_input/_humidity/humidity.css);
+@import url(./blocks/weather-characteristics/_input/_checkbox/checkbox.css);
+@import url(./blocks/result/result.css);
+@import url(./blocks/result/_lists/lists.css);
+@import url(./blocks/result/_lists/_list/list.css);
+@import url(./blocks/result/_lists/_input/input.css);
+@import url(./blocks/result/_lists/_img/img.css);
 
 
 
