@@ -1,0 +1,36 @@
+.result {
+  width: 420px;
+  height: 291px;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.result__recommendations--lists {
+  width: 211px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.recommendations--lists--paragraph{
+  display: block;
+  height: 34px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 150%;
+  font-size: 11px;
+}
+
+.recommendations--list--span{
+  font-weight: 800;
+}
+
+
+
+.result__recommendations--img {
+  width: 194px;
+  height: 291px;
+  border-radius: 15px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/import.css" />
+    <link rel="icon" href="./img/favicon.jpeg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Консультант по погоде</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Консультант по погоде</h1>
+
+      <form class="weather-characteristics">
+        <label class="weather-characteristics__input"
+          >Температура
+          <input
+            type="number"
+            class="weather-characteristics--temperature"
+          />
+          °C</label
+        >
+
+        <label class="weather-characteristics__input"
+          >Влажность
+          <select class="wrapper__weather-characteristics--humidity">
+            <option value="humidity--small">низкая</option>
+            <option selected value="humidity--middle">средняя</option>
+            <option value="humidity--high">высокая</option>
+          </select>
+        </label>
+
+        <label class="weather-characteristics__input"
+          >Осадки
+          <input
+            type="checkbox"
+            class="weather-characteristics--checkbox"
+        /></label>
+      </form>
+
+      <section class="result">
+        <div class="result__recommendations--lists">
+          <label class="recommendations--lists--paragraph">
+            <span class="recommendations--list--span span">Одежда:</span>
+            Легкая, дышащая, короткие брюки и футболка.
+          </label>
+          <label class="recommendations--lists--paragraph">
+            <span class="recommendations--list--span span">Обувь:</span> Легкая
+            — сандалии или открытые туфли
+          </label>
+          <label class="recommendations--lists--paragraph">
+            <span class="recommendations--list--span span">Аксессуары:</span>
+            Солнцезащитные очки, головной убор.
+          </label>
+        </div>
+        <img
+          src="./img/Image 1.png"
+          alt="Мужчина в летне-весенней одежде"
+          class="result__recommendations--img"
+        />
+      </section>
+    </div>
+  </body>
+</html>
