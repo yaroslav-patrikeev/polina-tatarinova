@@ -1,0 +1,6 @@
+.weather-characteristics__input {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-green);
+}

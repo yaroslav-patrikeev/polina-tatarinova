@@ -1,25 +1,19 @@
 @import url(./general/normalize.css);
-@import url(./general/universal.css);
 @import url(./general/var.css);
-@import url(./blocks/body/body.css);
-@import url(./blocks/wrapper/wrapper.css);
-@import url(./blocks/title/title.css);
-@import url(./blocks/weather-characteristics/weather-characteristics.css);
-@import url(./blocks/weather-characteristics/_input/input.css);
-@import url(./blocks/weather-characteristics/_input/_temperature/temperature.css);
-@import url(./blocks/weather-characteristics/_input/_humidity/humidity.css);
-@import url(./blocks/weather-characteristics/_input/_checkbox/checkbox.css);
-@import url(./blocks/result/result.css);
-@import url(./blocks/result/_lists/lists.css);
-@import url(./blocks/result/_lists/_list/list.css);
-@import url(./blocks/result/_lists/_input/input.css);
-@import url(./blocks/result/_lists/_img/img.css);
-
-
-
-
-
-
-
-
+@import url(./general/universal.css);
+@import url(./block/body/body.css);
+@import url(./block/wrapper/wrapper.css);
+@import url(./block/title/title.css);
+@import url(./block/weather-characteristics/weather-characteristics.css);
+@import url(./block/weather-characteristics/__input/weather-characteristics__input.css);
+@import url(./block/weather-characteristics/__temperature/weather-characteristics__temperature.css);
+@import url(./block/weather-characteristics/__himidity/weather-characteristics__humidity.css);
+@import url(./block/weather-characteristics/__checkbox/weather-characteristics__checkbox.css);
+@import url(./block/result/result.css);
+@import url(./block/result/__recommendations-list/result__recommendations-list.css);
+@import url(./block/result/__recommendations-list/_heading/result__recommendations-list_heading.css);
+@import url(./block/result/__recommendations-list/_clothes/result__recommendations-list_clothes.css);
+@import url(./block/result/__recommendations-list/_shoes/result__recommendations-list_shoes.css);
+@import url(./block/result/__recommendations-list/_accessories/result__recommendations-lists_accessories.css);
+@import url(./block/result/__recommendations-list/_img/);
 
