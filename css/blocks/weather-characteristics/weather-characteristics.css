@@ -2,9 +2,9 @@
   display: flex;
   gap: 60px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0;
   width: 622px;
-  white-space: nowrap;
+  height: 33px;
 }

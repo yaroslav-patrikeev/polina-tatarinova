@@ -11,22 +11,19 @@
     />
     <title>Консультант по погоде</title>
   </head>
-  
   <body class="body">
     <div class="wrapper">
       <h1 class="title">Консультант по погоде</h1>
-
       <form class="weather-characteristics">
-        <label class="weather-characteristics__input"
-          >Температура
-          <input
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_temperature"
+          >Температура<input
             type="text"
             class="weather-characteristics__temperature"
-          />
-          °C</label
+          />°C</label
         >
-
-        <label class="weather-characteristics__input"
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_humidity"
           >Влажность
           <select class="weather-characteristics__humidity">
             <option value="humidity_small">низкая</option>
@@ -34,28 +31,25 @@
             <option value="humidity_high">высокая</option>
           </select>
         </label>
-
-        <label class="weather-characteristics__input"
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_fallout"
           >Осадки
-          <input
-            type="checkbox"
-            class="weather-characteristics__checkbox"
+          <input type="checkbox" class="weather-characteristics__checkbox"
         /></label>
       </form>
-
       <section class="result">
         <ul class="recommendations-list">
-          <li class="recommendations-list__input">
-            <span class="recommendations-list__heading">Одежда:</span>Легкая, дышащая, короткие брюки и футболка.
+          <li>
+            <span class="recommendations-list__heading">Одежда: </span>Легкая,
+            дышащая, короткие брюки и футболка.
           </li>
-          <li class="recommendations-list__input">
-            <span class="recommendations-list__heading">Обувь:</span> Легкая
-            — сандалии или открытые туфли
+          <li>
+            <span class="recommendations-list__heading">Обувь: </span>Легкая —
+            сандалии или открытые туфли
           </li>
-          <li class="recommendations-lists__input">
-            <span class="recommendations-list__heading
-            ">Аксессуары:</span>
-            Солнцезащитные очки, головной убор.
+          <li>
+            <span class="recommendations-list__heading">Аксессуары: </span
+            >Солнцезащитные очки, головной убор.
           </li>
         </ul>
         <img
