@@ -1,6 +1,9 @@
 .title {
   font-weight: 600;
   font-size: 32px;
-  margin: 37px 191px 70px 191px;
-  transform: scaleX(1.06);
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  margin-bottom: 67px;
+  letter-spacing: 0.03em;
 }

@@ -10,11 +10,9 @@
 @import url(./blocks/weather-characteristics/__humidity/weather-characteristics__humidity.css);
 @import url(./blocks/weather-characteristics/__checkbox/weather-characteristics__checkbox.css);
 @import url(./blocks/result/result.css);
-@import url(./blocks/result/__recommendations-list/result__recommendations-list.css);
-@import url(./blocks/result/__recommendations-list/__mark/recommendations-list__mark.css);
-@import url(./blocks/result/__recommendations-list/__clothes/recommendations-list__clothes.css);
-@import url(./blocks/result/__recommendations-list/__shoes/recommendations-list__shoes.css);
-@import url(./blocks/result/__recommendations-list/__accessories/recommendations-lists__accessories.css);
-@import url(./blocks/result/__recommendations-list/__img/recommendations-list__img.css)
+@import url(./blocks/recommendations-list/recommendations-list.css);
+@import url(./blocks/recommendations-list/__heading/recommendations-list__heading.css);
+@import url(./blocks/recommendations-list/__img/recommendations-list__img.css);
+
 
 
