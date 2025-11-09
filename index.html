@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/import.css" />
+    <link rel="icon" href="./img/favicon.jpeg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Консультант по погоде</title>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <h1 class="title">Консультант по погоде</h1>
+      <form class="weather-characteristics">
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_temperature"
+          >Температура<input
+            type="text"
+            class="weather-characteristics__temperature"
+          />°C</label
+        >
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_humidity"
+          >Влажность
+          <select class="weather-characteristics__humidity">
+            <option value="humidity_small">низкая</option>
+            <option selected value="humidity_middle">средняя</option>
+            <option value="humidity_high">высокая</option>
+          </select>
+        </label>
+        <label
+          class="weather-characteristics__filter weather-characteristics__filter_type_fallout"
+          >Осадки
+          <input type="checkbox" class="weather-characteristics__checkbox"
+        /></label>
+      </form>
+      <section class="result">
+        <ul class="recommendations-list">
+          <li>
+            <span class="recommendations-list__heading">Одежда: </span>Легкая,
+            дышащая, короткие брюки и футболка.
+          </li>
+          <li>
+            <span class="recommendations-list__heading">Обувь: </span>Легкая —
+            сандалии или открытые туфли
+          </li>
+          <li>
+            <span class="recommendations-list__heading">Аксессуары: </span
+            >Солнцезащитные очки, головной убор.
+          </li>
+        </ul>
+        <img
+          src="./img/Image 1.png"
+          alt="Мужчина в летне-весенней одежде"
+          class="recommendations-list__img"
+        />
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.result {
+  width: 420px;
+  height: 291px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 165px;
+  margin-top: 119px;
+  gap: 15px;
+}
