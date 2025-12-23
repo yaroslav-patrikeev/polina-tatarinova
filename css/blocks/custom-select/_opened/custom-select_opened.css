@@ -1,0 +1,17 @@
+.custom-select_opened {
+  border-radius: 7px 7px 0px 0px;
+}
+
+.custom-select_opened::before {
+  content: "";
+  background-image: url(/img/up-arrow.svg);
+  fill: var(--color-green);
+  position: absolute;
+  top: 45%;
+  width: 7px;
+  height: 7px;
+  background-repeat: no-repeat;
+  right: 10px;
+  background-position: center;
+  background-size: contain;
+}
