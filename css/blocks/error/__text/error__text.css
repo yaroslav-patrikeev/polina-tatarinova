@@ -1,0 +1,5 @@
+.error__text {
+  position: relative;
+  left: -6px;
+  color: var(--color-green);
+}

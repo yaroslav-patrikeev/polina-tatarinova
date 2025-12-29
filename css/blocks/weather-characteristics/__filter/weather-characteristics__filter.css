@@ -3,4 +3,10 @@
   font-weight: 600;
   font-size: 16px;
   color: var(--color-green);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  width: 210px;
+  height: 33px;
+  justify-content: space-between;
 }

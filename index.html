@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="./scripts/index.js"
+      type="module"
+    ></script>
     <title>Консультант по погоде</title>
   </head>
   <body class="body">
@@ -18,46 +22,77 @@
         <label
           class="weather-characteristics__filter weather-characteristics__filter_type_temperature"
           >Температура<input
-            type="text"
+            id="temperature-input"
+            type="number"
             class="weather-characteristics__temperature"
+            value="20"
+            required
           />°C</label
         >
-        <label
+        <div
           class="weather-characteristics__filter weather-characteristics__filter_type_humidity"
-          >Влажность
-          <select class="weather-characteristics__humidity">
-            <option value="humidity_small">низкая</option>
-            <option selected value="humidity_middle">средняя</option>
-            <option value="humidity_high">высокая</option>
-          </select>
-        </label>
+        >
+          Влажность
+          <div class="custom-select">
+            <div id="title_humidity">средняя</div>
+
+            <ul class="custom-select__options">
+              <li class="custom-select__option">низкая</li>
+              <li class="custom-select__option">средняя</li>
+              <li class="custom-select__option custom-select__option_last">
+                высокая
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <label
           class="weather-characteristics__filter weather-characteristics__filter_type_fallout"
           >Осадки
-          <input type="checkbox" class="weather-characteristics__checkbox"
+          <input
+            type="checkbox"
+            class="weather-characteristics__checkbox custom-checkbox"
+            id="checkbox"
         /></label>
       </form>
       <section class="result">
         <ul class="recommendations-list">
           <li>
-            <span class="recommendations-list__heading">Одежда: </span>Легкая,
-            дышащая, короткие брюки и футболка.
+            <span class="recommendations-list__heading">Одежда:</span>
+            <span id="clothes"></span>
           </li>
           <li>
-            <span class="recommendations-list__heading">Обувь: </span>Легкая —
-            сандалии или открытые туфли
+            <span class="recommendations-list__heading">Обувь:</span>
+            <span id="shoes"></span>
           </li>
           <li>
             <span class="recommendations-list__heading">Аксессуары: </span
-            >Солнцезащитные очки, головной убор.
+            ><span id="accessories"></span>
           </li>
         </ul>
         <img
-          src="./img/Image 1.png"
-          alt="Мужчина в летне-весенней одежде"
           class="recommendations-list__img"
+          id="weather-picture"
+          alt="иллюстрация рекомендации по погоде"
         />
+
       </section>
+      <div class="error">
+        <div class="error__wrapper">
+          <img src="./img/no-data.svg" alt="" class="error__picture" />
+          <p class="error__text">Нет данных</p>
+        </div>
+      </div>
+
+      
+        <div class="loading">
+          <img
+            src="./img/preloarder.png"
+            alt="Загрузка"
+            class="loading__spinner"
+          />
+        </div>
+
     </div>
   </body>
 </html>
