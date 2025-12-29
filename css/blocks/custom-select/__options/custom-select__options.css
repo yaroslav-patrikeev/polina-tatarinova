@@ -1,0 +1,19 @@
+.custom-select__options {
+  visibility: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 97px;
+  top: 33px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 0px 0px 7px 7px;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  width: 112px;
+  height: 78px;
+}
