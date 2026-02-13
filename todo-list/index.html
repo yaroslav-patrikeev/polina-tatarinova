@@ -17,9 +17,7 @@
     <title>Умный список дел</title>
   </head>
   <body class="body">
-
     <div class="mainBlock">
-
       <section class="headlines">
         <div class="headlines__mainTitle">
           <img
@@ -54,16 +52,28 @@
       </section>
 
       <section class="statusButtons">
-        <button class="statusButtons__button" id="allTasksButton">
+        <button
+          class="statusButtons__button statusButtons__button_ative"
+          id="allTasksButton"
+        >
           Все задачи
         </button>
-        <button class="statusButtons__button" id="activeTasksButton">
+        <button
+          class="statusButtons__button statusButtons__button_ative"
+          id="activeTasksButton"
+        >
           Активные
         </button>
-        <button class="statusButtons__button" id="completedTaskButton">
+        <button
+          class="statusButtons__button statusButtons__button_ative"
+          id="completedTaskButton"
+        >
           Выполненные
         </button>
-        <button class="statusButtons__button" id="importantTaskButton">
+        <button
+          class="statusButtons__button statusButtons__button_ative"
+          id="importantTaskButton"
+        >
           Важные
         </button>
       </section>
@@ -75,7 +85,7 @@
         </div>
 
         <div class="taskStatusNavigation_statusOfTasks">
-          Активных: 
+          Активных:
           <span id="numberOfTasksActive">1</span>
         </div>
 
@@ -83,9 +93,73 @@
           Выполненных:
           <span id="numberOfTasks">2</span>
         </div>
-
       </section>
 
+      <section class="taskLists">
+        <div class="taskItem">
+          <input
+            type="checkbox"
+            class="taskItem__checkbox taskItem__checkbox_delete"
+          />
+          <span class="taskItem__text taskItem__text_delete"
+            >Изучить основы JS</span
+          >
+          <img
+            src="./img/star.png"
+            alt="метка задачи"
+            class="taskItem__star taskItem__star_active"
+          />
+          <img
+            src="./img/basket.png"
+            alt="корзина для удаления задачи"
+            class="taskItem__delete"
+          />
+        </div>
+
+        <div class="taskItem">
+          <input
+            type="checkbox"
+            class="taskItem__checkbox taskItem__checkbox_delete"
+          />
+          <span class="taskItem__text taskItem__text_delete"
+            >Создать свой первый проект</span
+          >
+          <img
+            src="./img/star.png"
+            alt="метка задачи"
+            class="taskItem__star taskItem__star_active"
+          />
+          <img
+            src="./img/basket.png"
+            alt="корзина для удаления задачи"
+            class="taskItem__delete"
+          />
+        </div>
+
+        <div class="taskItem">
+          <input
+            type="checkbox"
+            class="taskItem__checkbox taskItem__checkbox_delete"
+          />
+          <span class="taskItem__text taskItem__text_delete"
+            >Изучить основы HTML</span
+          >
+          <img
+            src="./img/star.png"
+            alt="метка задачи"
+            class="taskItem__star taskItem__star_active"
+          />
+          <img
+            src="./img/basket.png"
+            alt="корзина для удаления задачи"
+            class="taskItem__delete"
+          />
+        </div>
+      </section>
+
+      <span class="footer">
+        Задачи сохраняются автоматически в вашем браузере
+      </span>
     </div>
   </body>
 </html>

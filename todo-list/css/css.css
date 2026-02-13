@@ -15,7 +15,6 @@
   width: 800px;
   height: 761px;
   padding: 23px 36px 10px 36px;
-
 }
 
 .headlines {
@@ -157,4 +156,57 @@
   line-height: 175%;
   text-align: center;
   color: #000;
+}
+
+.taskLists {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.taskItem {
+  border: 1px solid #319795;
+  border-radius: 6px;
+  padding: 0px 24px;
+  width: 734px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.taskItem__checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  accent-color: #319795;
+  cursor: pointer;
+}
+
+.taskItem__text {
+  flex: 1;
+  font-size: 16px;
+  color: #1a202c;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #1a202c;
+}
+
+.taskItem__delete {
+  margin-left: 18px;
+}
+
+.footer {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 200%;
+  text-align: center;
+  color: #a0aec0;
+  margin-top: 65px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
