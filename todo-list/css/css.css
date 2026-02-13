@@ -1,0 +1,170 @@
+.body {
+  background: var(--color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.mainBlock {
+  background: var(--color-second);
+  box-shadow:
+    0 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 800px;
+  height: 761px;
+  margin: 0 auto;
+}
+
+.headlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 61px;
+}
+
+.headlines__mainTitle {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.headlines__mainTitle_title {
+  font-family: var(--font-family-Bold);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--color-first);
+  display: block;
+  width: 374px;
+  height: 40px;
+}
+
+.headlines__mainTitle_secondTitle {
+  font-family: var(--font-family-Bold);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--color-first);
+  margin: 17px 185px 61px 227px;
+}
+
+.newTask {
+  width: 728px;
+  height: 48px;
+  margin: 61px 36px 36px 36px;
+  display: flex;
+  justify-content: space-around;
+  gap: 36px;
+  font-family: var(--font-family-Regular);
+  font-weight: 400;
+  font-size: 18px;
+  color: #a0aec0;
+}
+
+.newTask__text {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0px 16px;
+  width: 532px;
+  height: 48px;
+  background: #fff;
+}
+
+.newTask__text:hover {
+  border: 1px solid #319795;
+}
+
+.newTask__text:active {
+  border: 1px solid #319795;
+}
+
+.newTask__button {
+  border-radius: 6px;
+  padding: 0 24px;
+  width: 160px;
+  height: 48px;
+  background: var(--color-button);
+  border: none;
+  font-family: var(--font-family-SemiBold);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.taskSearch {
+  width: 728px;
+  height: 48px;
+  margin: 36px;
+}
+
+.taskSearch__text {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0px 16px 0px 48px;
+  width: 728px;
+  height: 48px;
+  background-image: url(../img/loup.svg);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  font-family: var(--font-family-Regular);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.statusButtons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 52px;
+}
+
+.statusButtons__button {
+  border: none;
+  background: none;
+  padding: 8px 16px;
+  width: 143px;
+  height: 40px;
+  font-family: var(--font-family-Medium);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #1a202c;
+  cursor: pointer;
+}
+
+.statusButtons__button:focus {
+  border-radius: 9999px;
+  background: #319795;
+  color: #fff;
+  font-family: var(--font-family-SemiBold);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.taskStatusNavigation {
+  display: flex;
+  gap: 186px;
+  justify-content: space-between;
+  margin: 30px 44px 32px 44px;
+}
+
+.taskStatusNavigation_statusOfTasks {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-Medium);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: center;
+  color: #000;
+}

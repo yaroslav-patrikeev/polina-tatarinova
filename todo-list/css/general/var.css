@@ -1,0 +1,12 @@
+:root {
+  --font-family-Medium: "Inter Medium";
+  --font-family-Regular: "Inter Regular";
+  --font-family-SemiBold: "Inter SemiBold";
+  --font-family-Bold: "Inter Bold";
+  --color-body: #285e61;
+  --color-first: #000;
+  --color-second: #fff;
+  --color-button: #319795;
+  --color-placeholder: #a0aec0;
+  --color-third: #1a202c;
+}

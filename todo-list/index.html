@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/import.css" />
+    <!-- <script
+      src="./scripts/"
+      type="module"
+    ></script> -->
+    <!-- дописать ссылку -->
+    <title>Умный список дел</title>
+  </head>
+  <body class="body">
+    <div class="mainBlock">
+      <section class="headlines">
+        <div class="headlines__mainTitle">
+          <img
+            src="./img/logo.svg"
+            alt="логотип списка"
+            class="headlines__mainTitle_pictures"
+          />
+          <h1 class="headlines__mainTitle_title">Умный список дел</h1>
+        </div>
+        <h2 class="headlines__mainTitle_secondTitle">
+          Организуйте свои задачи эффективно
+        </h2>
+      </section>
+
+      <section class="newTask" id="newTask">
+        <input
+          type="text"
+          class="newTask__text"
+          id="taskInput"
+          placeholder="Введите новую задачу"
+        />
+        <button id="addTask" class="newTask__button">+ Добавить</button>
+      </section>
+
+      <section class="taskSearch">
+        <input
+          type="text"
+          class="taskSearch__text"
+          id="taskSearchInput"
+          placeholder="Поиск задач"
+        />
+      </section>
+
+      <section class="statusButtons">
+        <button class="statusButtons__button" id="allTasksButton">
+          Все задачи
+        </button>
+        <button class="statusButtons__button" id="activeTasksButton">
+          Активные
+        </button>
+        <button class="statusButtons__button" id="completedTaskButton">
+          Выполненные
+        </button>
+        <button class="statusButtons__button" id="importantTaskButton">
+          Важные
+        </button>
+      </section>
+
+      <section class="taskStatusNavigation">
+        <div class="taskStatusNavigation_statusOfTasks">
+          Всего задач:
+          <p id="numberOfTasks">3</p>
+        </div>
+
+        <div class="taskStatusNavigation_statusOfTasks">
+          Активных: 
+          <p id="numberOfTasksActive">1</p>
+        </div>
+
+        <div class="taskStatusNavigation_statusOfTasks">
+          Выполненных:
+          <p id="numberOfTasks">2</p>
+        </div>
+
+      </section>
+    </div>
+  </body>
+</html>
