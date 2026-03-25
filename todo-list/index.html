@@ -9,11 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- <script
-      src="./scripts/"
-      type="module"
-    ></script> -->
-    <!-- дописать ссылку -->
+    <script src="./scripts/index.js" defer></script>
     <title>Умный список дел</title>
   </head>
   <body class="body">
@@ -155,6 +151,28 @@
             class="taskItem__delete"
           />
         </div>
+
+        <template>
+          <div class="taskItem">
+            <input
+              type="checkbox"
+              class="taskItem__checkbox taskItem__checkbox_delete"
+            />
+            <span class="taskItem__text taskItem__text_delete"
+              >КАКОЙ ТО ТЕКСТ</span
+            >
+            <img
+              src="./img/star.png"
+              alt="метка задачи"
+              class="taskItem__star taskItem__star_active"
+            />
+            <img
+              src="./img/basket.png"
+              alt="корзина для удаления задачи"
+              class="taskItem__delete"
+            />
+          </div>
+        </template>
       </section>
 
       <span class="footer">
