@@ -1,0 +1,11 @@
+.new-task {
+  width: 728px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #a0aec0;
+  margin-top: 61px;
+}

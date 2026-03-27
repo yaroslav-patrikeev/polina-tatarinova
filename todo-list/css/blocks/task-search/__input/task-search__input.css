@@ -1,0 +1,13 @@
+.task-search__input{
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0px 16px 0px 48px;
+  width: 728px;
+  height: 48px;
+  background-image: url(../img/loup.svg);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+}

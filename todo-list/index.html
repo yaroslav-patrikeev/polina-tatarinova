@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/import.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scripts/index.js" defer></script>
+    <title>Умный список дел</title>
+  </head>
+  <body class="page">
+    <div class="main">
+      <section class="headlines">
+        <div class="headlines__main-title">
+          <img
+            src="./img/logo.svg"
+            alt="логотип списка"
+            class="headlines__logo"
+          />
+          <h1 class="headlines__title">Умный список дел</h1>
+        </div>
+        <h2 class="headlines__subtitle">Организуйте свои задачи эффективно</h2>
+      </section>
+
+      <section class="new-task" id="new-task-section">
+        <input
+          type="text"
+          class="new-task__input"
+          id="task-input"
+          placeholder="Введите новую задачу"
+        />
+        <button id="add-task-button" class="new-task__button">
+          + Добавить
+        </button>
+      </section>
+
+      <section class="task-search">
+        <input
+          type="text"
+          class="task-search__input"
+          id="task-search-input"
+          placeholder="Поиск задач"
+        />
+      </section>
+
+      <section class="status-buttons">
+        <button
+          class="status-buttons__button status-buttons__button--active"
+          id="filter-all-button"
+        >
+          Все задачи
+        </button>
+        <button class="status-buttons__button" id="filter-active-button">
+          Активные
+        </button>
+        <button class="status-buttons__button" id="filter-completed-button">
+          Выполненные
+        </button>
+        <button class="status-buttons__button" id="filter-important-button">
+          Важные
+        </button>
+      </section>
+
+      <section class="task-stats">
+        <div class="task-stats__item">
+          Всего задач:
+          <span id="total-tasks-count">3</span>
+        </div>
+
+        <div class="task-stats__item">
+          Активных:
+          <span id="active-tasks-count">1</span>
+        </div>
+
+        <div class="task-stats__item">
+          Выполненных:
+          <span id="completed-tasks-count">2</span>
+        </div>
+      </section>
+
+      <section class="task-list">
+        <div class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox--deletable"
+          />
+          <span class="task-list__text task-list__text--deletable"
+            >Изучить основы JS</span
+          >
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/favorites.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
+        </div>
+
+        <div class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox--deletable"
+          />
+          <span class="task-list__text task-list__text--deletable"
+            >Создать свой первый проект</span
+          >
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/star.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
+        </div>
+
+        <div class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox--deletable"
+          />
+          <span class="task-list__text task-list__text--deletable"
+            >Изучить основы HTML</span
+          >
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/favorites.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
+        </div>
+
+        <template>
+          <div class="task-list__item">
+            <input type="checkbox" class="task-list__checkbox" />
+            <span class="task-list__text">КАКОЙ ТО ТЕКСТ</span>
+            <button class="task-list__icon-button task-list__icon-button--star">
+              <img
+                src="./img/favorites.svg"
+                alt="метка задачи"
+                class="task-list__star"
+              />
+            </button>
+            <button
+              class="task-list__icon-button task-list__icon-button--delete"
+            >
+              <img
+                src="./img/basket.svg"
+                alt="корзина для удаления задачи"
+                class="task-list__delete"
+              />
+            </button>
+          </div>
+        </template>
+      </section>
+
+      <span class="footer">
+        Задачи сохраняются автоматически в вашем браузере
+      </span>
+    </div>
+  </body>
+</html>
