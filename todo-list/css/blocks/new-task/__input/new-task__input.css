@@ -1,0 +1,17 @@
+.new-task__input {
+  appearance: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0px 16px;
+  width: 532px;
+  height: 48px;
+  background: #fff;
+}
+
+.new-task__input:hover {
+  border: 1px solid #319795;
+}
+
+.new-task__input:active {
+  border: 1px solid #319795;
+}

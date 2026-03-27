@@ -1,0 +1,9 @@
+.task-stats__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: center;
+  color: #000;
+}

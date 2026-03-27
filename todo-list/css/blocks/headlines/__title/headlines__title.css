@@ -1,0 +1,7 @@
+.headlines__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--color-first);
+  margin: 0;
+}

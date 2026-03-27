@@ -12,165 +12,169 @@
     <script src="./scripts/index.js" defer></script>
     <title>Умный список дел</title>
   </head>
-  <body class="body">
-    <div class="mainBlock">
+  <body class="page">
+    <div class="main">
       <section class="headlines">
-        <div class="headlines__mainTitle">
+        <div class="headlines__main-title">
           <img
             src="./img/logo.svg"
             alt="логотип списка"
-            class="headlines__mainTitle_pictures"
+            class="headlines__logo"
           />
-          <h1 class="headlines__mainTitle_title">Умный список дел</h1>
+          <h1 class="headlines__title">Умный список дел</h1>
         </div>
-        <h2 class="headlines__mainTitle_secondTitle">
-          Организуйте свои задачи эффективно
-        </h2>
+        <h2 class="headlines__subtitle">Организуйте свои задачи эффективно</h2>
       </section>
 
-      <section class="newTask" id="newTask">
+      <section class="new-task" id="new-task-section">
         <input
           type="text"
-          class="newTask__text"
-          id="taskInput"
+          class="new-task__input"
+          id="task-input"
           placeholder="Введите новую задачу"
         />
-        <button id="addTask" class="newTask__button">+ Добавить</button>
+        <button id="add-task-button" class="new-task__button">
+          + Добавить
+        </button>
       </section>
 
-      <section class="taskSearch">
+      <section class="task-search">
         <input
           type="text"
-          class="taskSearch__text"
-          id="taskSearchInput"
+          class="task-search__input"
+          id="task-search-input"
           placeholder="Поиск задач"
         />
       </section>
 
-      <section class="statusButtons">
+      <section class="status-buttons">
         <button
-          class="statusButtons__button statusButtons__button_ative"
-          id="allTasksButton"
+          class="status-buttons__button status-buttons__button--active"
+          id="filter-all-button"
         >
           Все задачи
         </button>
-        <button
-          class="statusButtons__button statusButtons__button_ative"
-          id="activeTasksButton"
-        >
+        <button class="status-buttons__button" id="filter-active-button">
           Активные
         </button>
-        <button
-          class="statusButtons__button statusButtons__button_ative"
-          id="completedTaskButton"
-        >
+        <button class="status-buttons__button" id="filter-completed-button">
           Выполненные
         </button>
-        <button
-          class="statusButtons__button statusButtons__button_ative"
-          id="importantTaskButton"
-        >
+        <button class="status-buttons__button" id="filter-important-button">
           Важные
         </button>
       </section>
 
-      <section class="taskStatusNavigation">
-        <div class="taskStatusNavigation_statusOfTasks">
+      <section class="task-stats">
+        <div class="task-stats__item">
           Всего задач:
-          <span id="numberOfTasks">3</span>
+          <span id="total-tasks-count">3</span>
         </div>
 
-        <div class="taskStatusNavigation_statusOfTasks">
+        <div class="task-stats__item">
           Активных:
-          <span id="numberOfTasksActive">1</span>
+          <span id="active-tasks-count">1</span>
         </div>
 
-        <div class="taskStatusNavigation_statusOfTasks">
+        <div class="task-stats__item">
           Выполненных:
-          <span id="numberOfTasks">2</span>
+          <span id="completed-tasks-count">2</span>
         </div>
       </section>
 
-      <section class="taskLists">
-        <div class="taskItem">
+      <section class="task-list">
+        <div class="task-list__item">
           <input
             type="checkbox"
-            class="taskItem__checkbox taskItem__checkbox_delete"
+            class="task-list__checkbox task-list__checkbox--deletable"
           />
-          <span class="taskItem__text taskItem__text_delete"
+          <span class="task-list__text task-list__text--deletable"
             >Изучить основы JS</span
           >
-          <img
-            src="./img/star.png"
-            alt="метка задачи"
-            class="taskItem__star taskItem__star_active"
-          />
-          <img
-            src="./img/basket.png"
-            alt="корзина для удаления задачи"
-            class="taskItem__delete"
-          />
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/favorites.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
         </div>
 
-        <div class="taskItem">
+        <div class="task-list__item">
           <input
             type="checkbox"
-            class="taskItem__checkbox taskItem__checkbox_delete"
+            class="task-list__checkbox task-list__checkbox--deletable"
           />
-          <span class="taskItem__text taskItem__text_delete"
+          <span class="task-list__text task-list__text--deletable"
             >Создать свой первый проект</span
           >
-          <img
-            src="./img/star.png"
-            alt="метка задачи"
-            class="taskItem__star taskItem__star_active"
-          />
-          <img
-            src="./img/basket.png"
-            alt="корзина для удаления задачи"
-            class="taskItem__delete"
-          />
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/star.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
         </div>
 
-        <div class="taskItem">
+        <div class="task-list__item">
           <input
             type="checkbox"
-            class="taskItem__checkbox taskItem__checkbox_delete"
+            class="task-list__checkbox task-list__checkbox--deletable"
           />
-          <span class="taskItem__text taskItem__text_delete"
+          <span class="task-list__text task-list__text--deletable"
             >Изучить основы HTML</span
           >
-          <img
-            src="./img/star.png"
-            alt="метка задачи"
-            class="taskItem__star taskItem__star_active"
-          />
-          <img
-            src="./img/basket.png"
-            alt="корзина для удаления задачи"
-            class="taskItem__delete"
-          />
+          <button class="task-list__icon-button task-list__icon-button--star">
+            <img
+              src="./img/favorites.svg"
+              alt="метка задачи"
+              class="task-list__star"
+            />
+          </button>
+          <button class="task-list__icon-button task-list__icon-button--delete">
+            <img
+              src="./img/basket.svg"
+              alt="корзина для удаления задачи"
+              class="task-list__delete"
+            />
+          </button>
         </div>
 
         <template>
-          <div class="taskItem">
-            <input
-              type="checkbox"
-              class="taskItem__checkbox taskItem__checkbox_delete"
-            />
-            <span class="taskItem__text taskItem__text_delete"
-              >КАКОЙ ТО ТЕКСТ</span
+          <div class="task-list__item">
+            <input type="checkbox" class="task-list__checkbox" />
+            <span class="task-list__text">КАКОЙ ТО ТЕКСТ</span>
+            <button class="task-list__icon-button task-list__icon-button--star">
+              <img
+                src="./img/favorites.svg"
+                alt="метка задачи"
+                class="task-list__star"
+              />
+            </button>
+            <button
+              class="task-list__icon-button task-list__icon-button--delete"
             >
-            <img
-              src="./img/star.png"
-              alt="метка задачи"
-              class="taskItem__star taskItem__star_active"
-            />
-            <img
-              src="./img/basket.png"
-              alt="корзина для удаления задачи"
-              class="taskItem__delete"
-            />
+              <img
+                src="./img/basket.svg"
+                alt="корзина для удаления задачи"
+                class="task-list__delete"
+              />
+            </button>
           </div>
         </template>
       </section>

@@ -1,0 +1,6 @@
+.headlines__main-title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 423px;
+}
