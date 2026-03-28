@@ -1,12 +1,12 @@
 .task-search__input {
   width: 100%;
   padding: 12px;
-  padding-right: 32px; 
+  padding-left: 32px; 
   border: 1px solid #e2e8f0;
   border-radius: 4px;
   font-size: 16px;
 }
 
-.task-search__input:focus {
+.task-search__input:hover {
   border-color: #319795;
 }
