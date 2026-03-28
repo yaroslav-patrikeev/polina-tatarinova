@@ -1,12 +1,12 @@
-.task-list__star{
- background-image: url(../../../../img/star.svg); 
-    background-color: transparent; 
+.task-list__star {
+  background-color: transparent; 
   border: none;
   padding: 0;
   cursor: pointer;
   display: inline-block; 
-  width: 20px;         
+  width: 20px;    
   height: 20px;         
+  background-image: url(../../../../../img/favorites.svg)
   background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;

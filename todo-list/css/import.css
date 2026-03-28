@@ -13,6 +13,8 @@
 @import url(./blocks/new-task/__input/new-task__input.css);
 @import url(./blocks/new-task/__button/new-task__button.css);
 @import url(./blocks/task-search/task-search.css);
+@import url(./blocks/task-search/__field/task-search__field.css);
+@import url(./blocks/task-search/__icon/task-search__icon.css);
 @import url(./blocks/task-search/__input/task-search__input.css);
 @import url(./blocks/status-buttons/status-buttons.css);
 @import url(./blocks/status-buttons/__button/status-buttons__button.css);
@@ -23,5 +25,6 @@
 @import url(./blocks/task-list/__checkbox/task-list__checkbox.css);
 @import url(./blocks/task-list/__text/task-list__text.css);
 @import url(./blocks/task-list/__delete/task-list__delete.css);
-@import url(./blocks/task-list/__icon-button/task-list__icon-button.css);
+@import url(./blocks/task-list/__star/_active/task-list__star_active.css);
+@import url(./blocks/task-list/__star/task-list__star.css);
 @import url(./blocks/footer/footer.css);
