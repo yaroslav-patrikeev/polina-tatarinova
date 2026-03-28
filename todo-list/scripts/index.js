@@ -102,4 +102,10 @@ class TaskList {
     this.currentList = filteredList;
     return this.currentList;
   }
+
+  render(container){
+    container.innerHTML = '';
+  }
 }
+
+
