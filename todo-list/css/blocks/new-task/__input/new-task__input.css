@@ -6,6 +6,7 @@
   width: 532px;
   height: 48px;
   background: #fff;
+  font-size: 16px;
 }
 
 .new-task__input:hover {
@@ -14,4 +15,9 @@
 
 .new-task__input:active {
   border: 1px solid #319795;
+}
+
+.new-task__input::placeholder {
+  color: #A0AEC0;   
+  opacity: 1;     
 }

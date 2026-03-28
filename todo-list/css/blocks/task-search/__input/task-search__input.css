@@ -10,3 +10,8 @@
 .task-search__input:hover {
   border-color: #319795;
 }
+
+.task-search__input::placeholder {
+  color: #A0AEC0;   
+  opacity: 1;     
+}
