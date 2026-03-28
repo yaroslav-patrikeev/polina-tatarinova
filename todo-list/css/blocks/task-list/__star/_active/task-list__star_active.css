@@ -1,0 +1,16 @@
+.task-list__star {
+  background-color: transparent; 
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block; 
+  width: 20px;    
+  height: 20px;         
+  background-image: url(../../../../../img/favorites.svg)
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  line-height: 0;
+  outline: none;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,10 @@
+.main {
+  background: var(--color-second);
+  box-shadow:
+    0 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 800px;
+  height: 761px;
+  padding: 23px 36px 10px 36px;
+}

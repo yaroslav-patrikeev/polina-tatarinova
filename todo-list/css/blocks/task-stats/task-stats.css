@@ -1,0 +1,9 @@
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+.task-stats__item span {
+  margin-left: 4px;
+}

@@ -1,0 +1,20 @@
+.task-search__input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding-left: 48px;
+}
+
+.task-search__input:hover {
+  border-color: #319795;
+}
+
+.task-search__input::placeholder {
+  opacity: 1;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #a0aec0;
+}

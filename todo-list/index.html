@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/import.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scripts/index.js" defer></script>
+    <title>Умный список дел</title>
+  </head>
+  <body class="page">
+    <main class="main">
+      <header class="headlines">
+        <div class="headlines__main-title">
+          <img
+            src="./img/logo.svg"
+            alt="логотип списка"
+            class="headlines__logo"
+          />
+          <h1 class="headlines__title">Умный список дел</h1>
+        </div>
+        <h2 class="headlines__subtitle">Организуйте свои задачи эффективно</h2>
+      </header>
+
+      <section class="new-task" id="new-task-section">
+        <input
+          type="text"
+          class="new-task__input"
+          id="task-input"
+          placeholder="Введите новую задачу"
+        />
+        <button id="add-task-button" class="new-task__button">
+          + Добавить
+        </button>
+      </section>
+
+      <section class="task-search">
+        <div class="task-search__field">
+          <input
+            type="text"
+            class="task-search__input"
+            id="task-search-input"
+            placeholder="Поиск задач"
+          />
+          <div class="task-search__icon"></div>
+        </div>
+      </section>
+
+      <section class="status-buttons">
+        <button
+          class="status-buttons__button status-buttons__button_active"
+          id="filter-all-button"
+        >
+          Все задачи
+        </button>
+        <button class="status-buttons__button" id="filter-active-button">
+          Активные
+        </button>
+        <button class="status-buttons__button" id="filter-completed-button">
+          Выполненные
+        </button>
+        <button class="status-buttons__button" id="filter-important-button">
+          Важные
+        </button>
+      </section>
+
+      <section class="task-stats">
+        <div class="task-stats__item">
+          Всего задач: 
+          <span id="total-tasks-count">3</span>
+        </div>
+
+        <div class="task-stats__item">
+          Активных: 
+          <span id="active-tasks-count">1</span>
+        </div>
+
+        <div class="task-stats__item">
+          Выполненных: 
+          <span id="completed-tasks-count">2</span>
+        </div>
+      </section>
+
+      <ul class="task-list">
+        <li class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox_deletable"
+          />
+          <span class="task-list__text task-list__text_deletable"
+            >Изучить основы JS</span
+          >
+          <button class="task-list__star" aria-label="Отметить задачу"></button>
+          <button
+            class="task-list__delete"
+            aria-label="Удалить задачу"
+          ></button>
+        </li>
+
+        <li class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox_deletable"
+          />
+          <span class="task-list__text task-list__text_deletable"
+            >Создать свой первый проект</span
+          >
+          <button class="task-list__star" aria-label="Отметить задачу"></button>
+          <button
+            class="task-list__delete"
+            aria-label="Удалить задачу"
+          ></button>
+        </li>
+
+        <li class="task-list__item">
+          <input
+            type="checkbox"
+            class="task-list__checkbox task-list__checkbox_deletable"
+          />
+          <span class="task-list__text task-list__text_deletable"
+            >Изучить основы HTML</span
+          >
+          <button class="task-list__star" aria-label="Отметить задачу"></button>
+          <button
+            class="task-list__delete"
+            aria-label="Удалить задачу"
+          ></button>
+        </li>
+
+        <template id="task-template">
+          <li class="task-list__item">
+            <input type="checkbox" class="task-list__checkbox" />
+            <span class="task-list__text"></span>
+            <button
+              class="task-list__star"
+              aria-label="Отметить задачу"
+            ></button>
+            <button
+              class="task-list__delete"
+              aria-label="Удалить задачу"
+            ></button>
+          </li>
+        </template>
+      </ul>
+
+      <footer class="footer">
+        Задачи сохраняются автоматически в вашем браузере
+      </footer>
+    </main>
+  </body>
+</html>

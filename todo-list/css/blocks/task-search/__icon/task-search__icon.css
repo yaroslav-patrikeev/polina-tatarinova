@@ -1,0 +1,12 @@
+.task-search__icon {
+  position: absolute;
+  left: 15px;          
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('../../../../img/loup.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  padding-left: 15px;
+  background-size: 18px;
+}

@@ -1,0 +1,11 @@
+.status-buttons__button_active{
+  border-radius: 9999px;
+  background: #319795;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
