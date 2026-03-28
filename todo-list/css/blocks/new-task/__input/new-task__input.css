@@ -18,6 +18,9 @@
 }
 
 .new-task__input::placeholder {
-  color: #A0AEC0;   
-  opacity: 1;     
+  opacity: 1;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #a0aec0;
 }

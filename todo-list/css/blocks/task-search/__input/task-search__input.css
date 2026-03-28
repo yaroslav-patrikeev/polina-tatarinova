@@ -1,10 +1,9 @@
 .task-search__input {
   width: 100%;
   padding: 12px;
-  padding-left: 32px; 
+  padding-left: 32px;
   border: 1px solid #e2e8f0;
   border-radius: 4px;
-  font-size: 16px;
 }
 
 .task-search__input:hover {
@@ -12,6 +11,9 @@
 }
 
 .task-search__input::placeholder {
-  color: #A0AEC0;   
-  opacity: 1;     
+  opacity: 1;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #a0aec0;
 }
