@@ -135,3 +135,10 @@ class TaskList {
     });
   }
 }
+
+const checkingTaskRendering = new TaskList();
+checkingTaskRendering.createTask("Выгулять Шамана");
+checkingTaskRendering.createTask("Сделать дз");
+checkingTaskRendering.calculateCurrentList(TabStatus.ALL, "");
+const container = document.querySelector(".task-list");
+checkingTaskRendering.render(container);

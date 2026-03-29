@@ -70,17 +70,17 @@
 
       <section class="task-stats">
         <div class="task-stats__item">
-          Всего задач: 
+          Всего задач:
           <span id="total-tasks-count">3</span>
         </div>
 
         <div class="task-stats__item">
-          Активных: 
+          Активных:
           <span id="active-tasks-count">1</span>
         </div>
 
         <div class="task-stats__item">
-          Выполненных: 
+          Выполненных:
           <span id="completed-tasks-count">2</span>
         </div>
       </section>
@@ -131,7 +131,7 @@
           ></button>
         </li>
 
-        <template id="task-template">
+        <!-- <template id="task-template">
           <li class="task-list__item">
             <input type="checkbox" class="task-list__checkbox" />
             <span class="task-list__text"></span>
@@ -144,8 +144,19 @@
               aria-label="Удалить задачу"
             ></button>
           </li>
-        </template>
+        </template> -->
       </ul>
+      <template id="task-template">
+        <li class="task-list__item">
+          <input type="checkbox" class="task-list__checkbox" />
+          <span class="task-list__text"></span>
+          <button class="task-list__star" aria-label="Отметить задачу"></button>
+          <button
+            class="task-list__delete"
+            aria-label="Удалить задачу"
+          ></button>
+        </li>
+      </template>
 
       <footer class="footer">
         Задачи сохраняются автоматически в вашем браузере
