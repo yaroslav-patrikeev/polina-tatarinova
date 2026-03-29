@@ -106,16 +106,16 @@ class TaskList {
   render(container) {
     container.innerHTML = "";
     const template = document.querySelector("#task-template");
-    if (!template) {
-      const err = new Error("Шаблон для задачи не найден");
-      console.error(err); // это я записала для проверки кода в псоледующем, а так уберу, хочу оставить только alert, как для пользователя
-      alert(err.message); // в курсе что можно сделать просто alert("Шаблон для задачи не найден");, но моя цель поработать с error
-      return;
-    }
+    // if (!template) {
+    //   const err = new Error("Шаблон для задачи не найден");
+    //   console.error(err); // это я записала для проверки кода в псоледующем, а так уберу, хочу оставить только alert, как для пользователя
+    //   alert(err.message); // в курсе что можно сделать просто alert("Шаблон для задачи не найден");, но моя цель поработать с error
+    //   return;
+    // }
     for (let i = 0; i < this.currentList.length; i++) {
-      //пробовала через forEach, но что то очень сильно пошло не так, 
-      // не смогла разобраться, поэтому написала через for, как будто бы для меня так проще, 
-      // но я знаю 
+      //пробовала через forEach, но что то очень сильно пошло не так,
+      // не смогла разобраться, поэтому написала через for, как будто бы для меня так проще,
+      // но я знаю
       // что ты скажешь черз массив переписывать, но хотя бы роботоспособность проверь пожалуйста
       const task = this.currentList[i];
       const partTask = template.content.cloneNode(true);
@@ -126,8 +126,10 @@ class TaskList {
       if (textTaskList) textTaskList.textContent = task.title;
       if (checkboxTaskList) checkboxTaskList.checked = task.isCompleted;
       if (liTaskList) {
-        if (task.isCompleted) liTaskList.classList.add("task-list__item_completed");
-        if (task.isImportant) liTaskList.classList.add("task-list__item_important");
+        if (task.isCompleted)
+          liTaskList.classList.add("task-list__item_completed");
+        if (task.isImportant)
+          liTaskList.classList.add("task-list__item_important");
       }
       if (starButtonTaskList && task.isImportant) {
         starButtonTaskList.classList.add("task-list__star_active");
@@ -137,3 +139,11 @@ class TaskList {
     }
   }
 }
+
+//проверочка, вынесла в отдельную ветку что бы не смешивать с шагом 7
+const checkingTaskRendering = new TaskList();
+checkingTaskRendering.createTask("Выгулять Шамана");
+checkingTaskRendering.createTask("Сделать дз");
+checkingTaskRendering.calculateCurrentList(TabStatus.ALL, "");
+const container = document.querySelector(".task-list"); 
+checkingTaskRendering.render(container);
