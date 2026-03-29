@@ -1,5 +1,5 @@
 .task-list__item {
-  border: 1px solid #319795;
+  border: 1px solid var(--color-uncompleted);
   border-radius: 6px;
   padding: 0px 24px;
   width: 734px;
