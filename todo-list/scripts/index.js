@@ -94,7 +94,7 @@ class TaskList {
         matchesTab = !task.isCompleted;
       } else if (currentTab === TabStatus.IMPORTANT) {
         matchesTab = task.isImportant;
-      } 
+      }
       const matchesSearch = task.title.toLowerCase().includes(lowerSearch);
       return matchesTab && matchesSearch;
     });
@@ -103,9 +103,35 @@ class TaskList {
     return this.currentList;
   }
 
-  render(container){
-    container.innerHTML = '';
+  render() {
+    const container = document.querySelector(".task-list");
+    container.innerHTML = "";
+    const template = document.querySelector("#task-template");
+    if (!template) {
+      const err = new Error("Шаблон для задачи не найден");
+      console.error(err);
+      return;
+    }
+
+    this.currentList.forEach((task) => {
+      const partTask = template.content.cloneNode(true);
+      const taskItem = partTask.querySelector(".task-list__item");
+      const taskCheckbox = partTask.querySelector(".task-list__checkbox");
+      const taskText = partTask.querySelector(".task-list__text");
+      const taskStarButton = partTask.querySelector(".task-list__star");
+      taskText.textContent = task.title;
+      taskCheckbox.checked = task.isCompleted;
+      if (task.isCompleted) {
+        taskItem.classList.add("task-list__item_completed");
+      }
+      if (task.isImportant) {
+        taskItem.classList.add("task-list__item_important");
+      }
+      if (taskStarButton && task.isImportant) {
+        taskStarButton.classList.add("task-list__star_active");
+      }
+
+      container.appendChild(partTask);
+    });
   }
 }
-
-
