@@ -103,37 +103,35 @@ class TaskList {
     return this.currentList;
   }
 
-  render(container) {
+  render() {
+    const container = document.querySelector(".task-list");
     container.innerHTML = "";
     const template = document.querySelector("#task-template");
     if (!template) {
       const err = new Error("Шаблон для задачи не найден");
-      console.error(err); // это я записала для проверки кода в псоледующем, а так уберу, хочу оставить только alert, как для пользователя
-      alert(err.message); // в курсе что можно сделать просто alert("Шаблон для задачи не найден");, но моя цель поработать с error
+      console.error(err);
       return;
     }
-    for (let i = 0; i < this.currentList.length; i++) {
-      //пробовала через forEach, но что то очень сильно пошло не так, 
-      // не смогла разобраться, поэтому написала через for, как будто бы для меня так проще, 
-      // но я знаю 
-      // что ты скажешь черз массив переписывать, но хотя бы роботоспособность проверь пожалуйста
-      const task = this.currentList[i];
+
+    this.currentList.forEach((task) => {
       const partTask = template.content.cloneNode(true);
-      const liTaskList = partTask.querySelector(".task-list__item");
-      const checkboxTaskList = partTask.querySelector(".task-list__checkbox");
-      const textTaskList = partTask.querySelector(".task-list__text");
-      const starButtonTaskList = partTask.querySelector(".task-list__star");
-      if (textTaskList) textTaskList.textContent = task.title;
-      if (checkboxTaskList) checkboxTaskList.checked = task.isCompleted;
-      if (liTaskList) {
-        if (task.isCompleted) liTaskList.classList.add("task-list__item_completed");
-        if (task.isImportant) liTaskList.classList.add("task-list__item_important");
+      const taskItem = partTask.querySelector(".task-list__item");
+      const taskCheckbox = partTask.querySelector(".task-list__checkbox");
+      const taskText = partTask.querySelector(".task-list__text");
+      const taskStarButton = partTask.querySelector(".task-list__star");
+      taskText.textContent = task.title;
+      taskCheckbox.checked = task.isCompleted;
+      if (task.isCompleted) {
+        taskItem.classList.add("task-list__item_completed");
       }
-      if (starButtonTaskList && task.isImportant) {
-        starButtonTaskList.classList.add("task-list__star_active");
+      if (task.isImportant) {
+        taskItem.classList.add("task-list__item_important");
+      }
+      if (taskStarButton && task.isImportant) {
+        taskStarButton.classList.add("task-list__star_active");
       }
 
       container.appendChild(partTask);
-    }
+    });
   }
 }
