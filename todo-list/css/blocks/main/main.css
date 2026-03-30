@@ -5,6 +5,6 @@
     0 1px 2px 0 rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   width: 800px;
-  height: 761px;
+  min-height: 761px;
   padding: 23px 36px 10px 36px;
 }

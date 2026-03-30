@@ -1,0 +1,9 @@
+.task-list__item_completed {
+  border: 1px solid #319795;
+  border-radius: 6px;
+  padding: 0px 24px;
+  width: 734px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
