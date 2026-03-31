@@ -7,4 +7,6 @@
   width: 800px;
   min-height: 761px;
   padding: 23px 36px 10px 36px;
+  display: flex;
+  flex-direction: column;
 }

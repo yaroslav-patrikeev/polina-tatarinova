@@ -16,6 +16,9 @@ class TaskList {
     this.currentTab = TabStatus.ALL;
     this.searchString = ""; 
     this.init();
+    this.#createTask("Выгулять Шамана");
+    this.#createTask("Сделать дз");
+    this.#createTask("Покормить собак");
   }
 
   #createTask(title) {
@@ -52,7 +55,6 @@ class TaskList {
     } else {
       this.activeTasksCount--;
     } 
-    this.#calculateCurrentList();
     this.#render();
   }
 
@@ -65,7 +67,6 @@ class TaskList {
       throw new Error(`Задача с id ${id} не найдена`); 
     }
     task.isImportant = !task.isImportant;
-    this.#calculateCurrentList();
     this.#render();
   }
 
@@ -86,7 +87,6 @@ class TaskList {
       this.activeTasksCount--;
       this.completedTasksCount++;
     }
-    this.#calculateCurrentList();
     this.#render();
   }
 
@@ -135,7 +135,7 @@ class TaskList {
       taskText.textContent = task.title; 
       taskCheckbox.checked = task.isCompleted;
       taskStarButton.addEventListener("click", () => {
-        this.toggleImportantById(task.id);
+        this.#toggleImportantById(task.id);
       });
       if (task.isCompleted) {
         taskItem.classList.add("task-list__item_completed");
@@ -146,11 +146,11 @@ class TaskList {
       }
 
       taskCheckbox.addEventListener("change", () => {
-        this.toggleCompleteById(task.id);
+        this.#toggleCompleteById(task.id);
       });
 
       taskDeleteButton.addEventListener("click", () => {
-        this.deleteTaskById(task.id);
+        this.#deleteTaskById(task.id);
       });
       container.appendChild(partTask);
     });
@@ -172,7 +172,7 @@ class TaskList {
          alert("Вы не можете добавить пустую задачу");
          return;
        }
-       this.№(title);
+       this.#createTask(title);
        taskInput.value = "";
      });
 
@@ -220,8 +220,3 @@ class TaskList {
 }
 
 const checkingTaskRendering = new TaskList();
-checkingTaskRendering.#createTask("Выгулять Шамана");
-checkingTaskRendering.#createTask("Сделать дз");
-checkingTaskRendering.calculateCurrentList(TabStatus.ALL, "");
-const container = document.querySelector(".task-list");
-checkingTaskRendering.render(container);
