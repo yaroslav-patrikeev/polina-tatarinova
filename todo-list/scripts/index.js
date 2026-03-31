@@ -16,6 +16,19 @@ class TaskList {
     this.currentTab = TabStatus.ALL;
     this.searchString = ""; 
     this.#init();
+    this.#saveLocalStorage()
+  }
+
+  #saveLocalStorage(){
+    const conservation = {
+      list: this.list,
+      id: this.id,
+      currentTab: this.currentTab,
+      searchString: this.searchString,
+    };
+    localStorage.setItem("taskList", JSON.stringify(conservation));//сохроняю
+    const retrievedUser = JSON.parse(localStorage.getItem("taskList"));//извлекаю
+    console.log(retrievedUser.list);//для себя
   }
 
   #createTask(title) {
@@ -27,7 +40,9 @@ class TaskList {
     });
     this.allTasksCount++; 
     this.activeTasksCount++; 
+    this.#saveLocalStorage();
     this.#render();
+    
   }
 
   #deleteTaskById(id) {
@@ -52,6 +67,7 @@ class TaskList {
     } else {
       this.activeTasksCount--;
     } 
+    this.#saveLocalStorage();
     this.#render();
   }
 
@@ -64,6 +80,7 @@ class TaskList {
       throw new Error(`Задача с id ${id} не найдена`); 
     }
     task.isImportant = !task.isImportant;
+    this.#saveLocalStorage();
     this.#render();
   }
 
@@ -84,6 +101,7 @@ class TaskList {
       this.activeTasksCount--;
       this.completedTasksCount++;
     }
+    this.#saveLocalStorage();
     this.#render();
   }
 
