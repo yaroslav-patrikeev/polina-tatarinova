@@ -26,6 +26,8 @@
 @import url(./blocks/task-list/__checkbox/task-list__checkbox.css);
 @import url(./blocks/task-list/__text/task-list__text.css);
 @import url(./blocks/task-list/__delete/task-list__delete.css);
-@import url(./blocks/task-list/__star/_active/task-list__star_active.css);
 @import url(./blocks/task-list/__star/task-list__star.css);
+@import url(./blocks/task-list/__star/_active/task-list__star_active.css);
+@import url(./blocks/task-list/__item/_completed/task-list__item_completed.css);
+@import url(./blocks/task-list/__text/_deletable/task-list__text_deletable.css);
 @import url(./blocks/footer/footer.css);

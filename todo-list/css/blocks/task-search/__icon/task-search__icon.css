@@ -8,5 +8,6 @@
   background-position: center;
   pointer-events: none;
   padding-left: 15px;
-  background-size: 18px;
+  width: 18px;
+  height: 18px;
 }
