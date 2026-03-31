@@ -175,7 +175,6 @@ class TaskList {
   #init() {
     const savedData = JSON.parse(localStorage.getItem("taskList"));
     if (savedData) {
-      //проверяю, что данные успешно загружены, если не проверять может быть значение null, но в принципе можно и без неё так как данные у нас всегда вроде бы есть
       this.list = savedData.list;
       this.id = savedData.id;
       this.currentTab = savedData.currentTab;
@@ -189,19 +188,6 @@ class TaskList {
       ).length;
     }
     this.#render()
-    //если убрать проверку то код будет вынлядеть вот так
-    // this.list = savedData.list;
-    // this.id = savedData.id;
-    // this.currentTab = savedData.currentTab;
-    // this.searchString = savedData.searchString;
-    // this.allTasksCount = this.list.length;
-    // this.activeTasksCount = this.list.filter(
-    //   (task) => !task.isCompleted,
-    // ).length;
-    // this.completedTasksCount = this.list.filter(
-    //   (task) => task.isCompleted,
-    // ).length;
-    // this.#render();
     const addTaskButton = document.querySelector("#add-task-button");
     const taskInput = document.querySelector("#task-input");
     
