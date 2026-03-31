@@ -16,7 +16,6 @@ class TaskList {
     this.currentTab = TabStatus.ALL;
     this.searchString = ""; 
     this.#init();
-    this.#saveLocalStorage()
   }
 
   #saveLocalStorage(){
@@ -26,9 +25,8 @@ class TaskList {
       currentTab: this.currentTab,
       searchString: this.searchString,
     };
-    localStorage.setItem("taskList", JSON.stringify(conservation));//сохроняю
-    const retrievedUser = JSON.parse(localStorage.getItem("taskList"));//извлекаю
-    console.log(retrievedUser.list);//для себя
+    localStorage.setItem("taskList", JSON.stringify(conservation));
+    // JSON.parse(localStorage.getItem("taskList"));
   }
 
   #createTask(title) {
@@ -40,7 +38,6 @@ class TaskList {
     });
     this.allTasksCount++; 
     this.activeTasksCount++; 
-    this.#saveLocalStorage();
     this.#render();
     
   }
@@ -67,7 +64,6 @@ class TaskList {
     } else {
       this.activeTasksCount--;
     } 
-    this.#saveLocalStorage();
     this.#render();
   }
 
@@ -80,7 +76,6 @@ class TaskList {
       throw new Error(`Задача с id ${id} не найдена`); 
     }
     task.isImportant = !task.isImportant;
-    this.#saveLocalStorage();
     this.#render();
   }
 
@@ -101,7 +96,6 @@ class TaskList {
       this.activeTasksCount--;
       this.completedTasksCount++;
     }
-    this.#saveLocalStorage();
     this.#render();
   }
 
@@ -129,6 +123,7 @@ class TaskList {
   }
 
   #render() {
+    this.#saveLocalStorage();
     this.#calculateCurrentList(); 
     const container = document.querySelector(".task-list"); 
     container.innerHTML = ""; 
@@ -178,6 +173,35 @@ class TaskList {
   }
 
   #init() {
+    const savedData = JSON.parse(localStorage.getItem("taskList"));
+    if (savedData) {
+      //проверяю, что данные успешно загружены, если не проверять может быть значение null, но в принципе можно и без неё так как данные у нас всегда вроде бы есть
+      this.list = savedData.list;
+      this.id = savedData.id;
+      this.currentTab = savedData.currentTab;
+      this.searchString = savedData.searchString;
+      this.allTasksCount = this.list.length;
+      this.activeTasksCount = this.list.filter(
+        (task) => !task.isCompleted,
+      ).length;
+      this.completedTasksCount = this.list.filter(
+        (task) => task.isCompleted,
+      ).length;
+    }
+    this.#render()
+    //если убрать проверку то код будет вынлядеть вот так
+    // this.list = savedData.list;
+    // this.id = savedData.id;
+    // this.currentTab = savedData.currentTab;
+    // this.searchString = savedData.searchString;
+    // this.allTasksCount = this.list.length;
+    // this.activeTasksCount = this.list.filter(
+    //   (task) => !task.isCompleted,
+    // ).length;
+    // this.completedTasksCount = this.list.filter(
+    //   (task) => task.isCompleted,
+    // ).length;
+    // this.#render();
     const addTaskButton = document.querySelector("#add-task-button");
     const taskInput = document.querySelector("#task-input");
     
