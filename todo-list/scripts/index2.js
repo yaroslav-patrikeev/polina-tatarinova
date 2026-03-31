@@ -30,7 +30,7 @@ class TaskList {
     //  Пока ноль.(Завершенное количество задач)
   }
 
-  createTask(title) {
+  #createTask(title) {
     //Он принимает один параметр – title (текст новой задачи).
     this.list.push({
       //метод массивов, который
@@ -125,7 +125,7 @@ class TaskList {
     return this.currentList;
   }
 
-  render() {
+  #render() {
     const container = document.querySelector(".task-list");
     container.innerHTML = "";
     const template = document.querySelector("#task-template");
@@ -159,8 +159,8 @@ class TaskList {
 }
 
 const checkingTaskRendering = new TaskList();
-checkingTaskRendering.createTask("Выгулять Шамана");
-checkingTaskRendering.createTask("Сделать дз");
+checkingTaskRendering.#createTask("Выгулять Шамана");
+checkingTaskRendering.#createTask("Сделать дз");
 checkingTaskRendering.calculateCurrentList(TabStatus.ALL, "");
 const container = document.querySelector(".task-list");
 checkingTaskRendering.render(container);
