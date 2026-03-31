@@ -15,10 +15,7 @@ class TaskList {
     this.completedTasksCount = 0; 
     this.currentTab = TabStatus.ALL;
     this.searchString = ""; 
-    this.init();
-    this.#createTask("Выгулять Шамана");
-    this.#createTask("Сделать дз");
-    this.#createTask("Покормить собак");
+    this.#init();
   }
 
   #createTask(title) {
@@ -162,7 +159,7 @@ class TaskList {
       this.completedTasksCount;
   }
 
-  init() {
+  #init() {
     const addTaskButton = document.querySelector("#add-task-button");
     const taskInput = document.querySelector("#task-input");
     
